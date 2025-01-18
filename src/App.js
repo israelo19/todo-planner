@@ -66,14 +66,16 @@ function App() {
    
     <div className="App">
       <div> 
-        <Navbar></Navbar>  
+        {/* <Navbar></Navbar>   */}
+        <Navbar profile={profile} onLogout={handleLogout} />
       </div>
       
         <header className="App-header">
-        <Home></Home>
+        {/* <Home></Home> */}
+        <Home profile={profile} onLogin={login} onLogout={handleLogout} />
         {/* <List></List> */}
         <br />
-        <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+        {/* <GoogleLogin onSuccess={responseMessage} onError={errorMessage} /> */}
 
         </header>
     </div>

@@ -12,7 +12,8 @@ import { Link } from "react-scroll";
 import profileImage from '../assets/amazon_portrait.jpeg'; // Adjust the path as needed
 
 
-const Navbar = () => {
+
+const Navbar = ({ profile, onLogout }) => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
@@ -22,7 +23,7 @@ const Navbar = () => {
 
         <h1 className="relative group font-thin text-5xl  font-Jersey25">
         <span className="block transition-opacity duration-300 group-hover:opacity-0">
-          Welcome *User*
+        {profile ? `Welcome ${profile.given_name}` : 'Welcome Guest'}
         </span>
         <span className= "absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-nowrap">
             HE &gt; i
@@ -41,8 +42,8 @@ const Navbar = () => {
       {/* Profile Image */}
       <div className="flex items-center">
         <img
-          src={profileImage}
-          alt="Profile"
+          src={profile ? profile.picture : profileImage}
+          alt={profile ? 'User Profile' : 'Default Profile'}
           className="w-14 h-14 rounded-full ml-4"
         />
       </div>

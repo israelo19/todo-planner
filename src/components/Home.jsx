@@ -1,6 +1,16 @@
 import React from 'react';
+import { GoogleLogin } from "@react-oauth/google";
 
-const Home = () => {
+
+
+
+const Home = ({ profile, onLogin, onLogout }) => {
+
+  const handleLoginSuccess = async (response) => {
+    await onLogin(response);
+    // navigate('/todo');
+  };
+
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="text-center mb-8">
@@ -18,12 +28,26 @@ const Home = () => {
       </div>
       
       <div className="flex flex-col gap-4 w-full max-w-xs">
-        <button className="bg-[#152E4D] text-white py-3 px-6 w-full text-2xl font-Jersey25">
+      {!profile ? (
+          <GoogleLogin
+            onSuccess={handleLoginSuccess}
+            onError={(error) => console.log("Login Failed:", error)}
+          />
+        ) : (
+          <button
+            onClick={onLogout}
+            className="bg-[#152E4D] text-white py-3 px-6 w-full text-2xl font-Jersey25"
+          >
+            Logout
+          </button>
+        )}
+       
+        {/* <button className="bg-[#152E4D] text-white py-3 px-6 w-full text-2xl font-Jersey25">
           Login
         </button>
         <button className="bg-[#152E4D] text-white py-3 px-6 w-full text-2xl font-Jersey25">
           Sign Up!
-        </button>
+        </button> */}
       </div>
     </div>
   );
