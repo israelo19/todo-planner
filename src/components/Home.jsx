@@ -5,13 +5,13 @@ const Home = () => {
     <div className="flex flex-col items-center justify-center w-full">
       <div className="text-center mb-8">
         <h1 className="font-Jersey25 text-[#152E4D] flex flex-col items-center">
-          <span className="text-9xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] relative animate-bounce animation-delay-0">
+          <span className="text-9xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] opacity-0 animate-slide-in">
             What do
           </span>
-          <span className="text-9xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] relative animate-bounce animation-delay-0">
+          <span className="text-9xl mb-4 drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] opacity-0 animate-slide-in [animation-delay:200ms]">
             you have
           </span>
-          <span className="text-9xl drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] relative animate-bounce animation-delay-0">
+          <span className="text-9xl drop-shadow-[0_1.2px_1.2px_rgba(5,0,0,0.8)] opacity-0 animate-slide-in [animation-delay:400ms]">
             ToDO?
           </span>
         </h1>
