@@ -3,7 +3,8 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {      keyframes: {
+    extend: {      
+      keyframes: {
       'slide-in': {
         '0%': { 
           transform: 'translateX(-100%)',

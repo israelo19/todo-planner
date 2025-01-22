@@ -9,7 +9,7 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
-import profileImage from '../assets/amazon_portrait.jpeg'; // Adjust the path as needed
+import profileImage from '../assets/blankUser.jpg';
 
 
 
